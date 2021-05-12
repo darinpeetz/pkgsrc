@@ -60,7 +60,7 @@ PLIST.x11=		yes
 CONFIGURE_ARGS+=	--with-blas="-framework Accelerate"
 .else
 CONFIGURE_ARGS+=	--disable-BLAS-shlib
-CONFIGURE_ARGS+=	--with-blas
+CONFIGURE_ARGS+=	--with-blas=${BLAS_LIBS}
 .endif
 
 # Work around missing MAIN__() definition used in -lF77 by AC_CHECK_LIB.
